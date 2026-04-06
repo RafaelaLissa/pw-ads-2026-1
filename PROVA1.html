@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cor-magenta {color:#FF00FF}
+        .cor-purple {color:#800080}
+        .cor-indigo{color:#4B0082}
+        
+    </style>
+</head>
+<body>
+      <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <div id="root"></div>
+
+  <script type="text/babel"> 
+    const Loja = ({produto, preco, estoque}) =>{
+        return(
+            <>
+                <h1 className="cor-magenta">Qual o produto: {produto}</h1>
+                <p className="cor-purple"> Preço do produto R${preco.toFixed(2)}</p>
+                <p className="cor-indigo">Quantidade em estoque:{estoque}</p>
+            </>
+        );
+    }
+    const container = <>
+            
+        <Loja produto="Bota" preco={120.0}  estoque="30"/>
+    </>
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(container);
+/*o raciocinio que eu usei foi grifar as partes importantes na folha e colocando código 
+um por um analisando códigos antigos que me ajudou muito,fui desmenbrando meu pensamento para criar o código*/
+  </script>
+    
+</body>
+</html>
